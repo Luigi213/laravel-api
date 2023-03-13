@@ -18,7 +18,7 @@ use App\Http\Controllers\Api\GuestController as GuestController;
 
 Route::get('/project', [ProjectController::class, 'index']);
 Route::get('/project/{titolo}', [ProjectController::class, 'show']);
-Route::get('/guest', [GuestController::class, 'index']);
+Route::post('/contact', [GuestController::class, 'store']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

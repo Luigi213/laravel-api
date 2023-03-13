@@ -12,15 +12,15 @@ use App\Mail\GuestLead;
 
 class GuestController extends Controller
 {
-    public function index(Request $request){
+    public function store(Request $request){
        $form_data = $request->all();
 
        $validation = Validator::make($form_data, [
             'name' => 'required',
             'surname' => 'required',
             'email' => 'required',
-            'message' => 'required',
-            'number' => 'required'
+            'number' => 'required',
+            'message' => 'required'
        ]);
 
         if($validation->fails()){
