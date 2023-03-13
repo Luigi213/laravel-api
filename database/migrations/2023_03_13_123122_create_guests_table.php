@@ -18,8 +18,8 @@ return new class extends Migration
             $table->string('name', 50);
             $table->string('surname', 50);
             $table->string('email', 100);
-            $table->string('password', 50);
-            $table->string('description', 150)->nullable();
+            $table->string('number', 15);
+            $table->string('message', 50);
             $table->timestamps();
         });
     }

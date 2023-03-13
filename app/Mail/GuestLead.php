@@ -20,7 +20,7 @@ class GuestLead extends Mailable
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($_lead)
     {
         $this->lead = $_lead;
     }
