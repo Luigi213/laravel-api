@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\ProjectController as ProjectController;
+use App\Http\Controllers\Api\GuestController as GuestController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,7 @@ use App\Http\Controllers\Api\ProjectController as ProjectController;
 
 Route::get('/project', [ProjectController::class, 'index']);
 Route::get('/project/{titolo}', [ProjectController::class, 'show']);
+Route::get('/guest', [GuestController::class, 'index']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
